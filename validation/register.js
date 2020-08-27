@@ -7,14 +7,14 @@ module.exports = function validateRegisterInput(request, response, done) {
   let packet = {};
 
   let errors = {};
-  data.username = !isEmpty(data.username) ? data.username : "";
+  data.name = !isEmpty(data.name) ? data.name : "";
   data.email = !isEmpty(data.email) ? data.email : "";
   data.password1 = !isEmpty(data.password1) ? data.password1 : "";
   data.password2 = !isEmpty(data.password2) ? data.password2 : "";
 
-  // Username checks
-  if (Validator.isEmpty(data.username)) {
-    errors.username = "Username field is required";
+  // name checks
+  if (Validator.isEmpty(data.name)) {
+    errors.name = "Name field is required";
   }
 
   // Email checks

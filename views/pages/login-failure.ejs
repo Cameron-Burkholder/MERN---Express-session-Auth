@@ -11,17 +11,12 @@
         <fieldset class="form-fieldset" id="email-field">
           <label class="form-label" htmlFor="email">Email</label>
           <input class="form-input" id="email" type="email" name="email" required/>
-          <% if (errors && errors.length > 0 && errors.email !== "") { %>
-            <span class="form-error"><%= errors.email %></span>
-          <% } %>
         </fieldset>
         <fieldset class="form-fieldset" id="password-field">
           <label class="form-label" htmlFor="password">Password</label>
           <input class="form-input" id="password" type="password" name="password" required/>
-          <% if (errors && errors.length > 0 && errors.password !== "") { %>
-            <span class="form-error"><%= errors.password %></span>
-          <% } %>
         </fieldset>
+        <span class="form-error">Email or password incorrect.</span>
         <button class="form-button" type="submit" form="login-form">Login</button>
       </form>
     </main>

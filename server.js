@@ -16,8 +16,10 @@ const { log } = require("./config/utilities");
 // SETUP EXPRESS
 const app = express();
 app.use(express.static(path.join(__dirname, "public")));
-app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
 app.set("view-engine", "ejs");
 
 // SETUP DATABASE
@@ -44,7 +46,9 @@ require("./config/auth")(passport, app, sessionStore);
 require("./routes/users")(app, passport);
 app.get("/", function(request, response) {
   log("GET REQUEST AT /");
-  response.render("pages/index.ejs");
+  response.render("pages/index.ejs", {
+    loggedIn: request.isAuthenticated()
+  });
 });
 app.get("/dashboard", function(request, response) {
   log("GET REQUEST AT /dashboard");

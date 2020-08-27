@@ -40,6 +40,7 @@ module.exports = (passport, app, sessionStore) => {
           return done(error);
         }
         if (!user) {
+          console.log("invalid");
           return done(null, false);
         } else {
           const isValidPassword = verifyPassword(password, user.password);

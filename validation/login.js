@@ -30,7 +30,6 @@ module.exports = function validateLoginInput(request, response, done) {
       status: packet.status,
       errors: packet.errors
     });
-    response.end();
   } else {
     done();
   }

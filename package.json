@@ -1,7 +1,7 @@
 {
-  "name": "stratbook",
+  "name": "MERN Express-session Auth",
   "version": "1.0.0",
-  "description": "A platform for teams to manage strategies and operations in Rainbow Six Siege.",
+  "description": "Boilerplate for Express-session and EJS web applications",
   "main": "server.js",
   "scripts": {
     "test": "node server.js",

@@ -4,7 +4,11 @@
 <html lang="en">
   <%- include("../partials/head") %>
   <body class="container">
-    <%- include("../partials/header") %>
+    <% if (loggedIn) { %>
+      <%- include("../partials/header-auth") %>
+    <% } else { %>
+      <%- include("../partials/header") %>
+    <% } %>
     <main class="main">
       <h1>Home</h1>
     </main>

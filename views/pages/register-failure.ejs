@@ -11,31 +11,20 @@
         <fieldset class="form-fieldset" id="name-field">
           <label class="form-label" htmlFor="name">Name</label>
           <input class="form-input" id="name" type="text" name="name"/>
-          <% if (errors && errors.length > 0 && errors.name !== "") { %>
-            <span class="form-error"><%= errors.name %></span>
-          <% } %>
         </fieldset>
         <fieldset class="form-fieldset" id="email-field">
           <label class="form-label" htmlFor="email">Email</label>
           <input class="form-input" id="email" type="email" name="email"/>
-          <% if (errors && errors.length > 0 && errors.email !== "") { %>
-            <span class="form-error"><%= errors.email %></span>
-          <% } %>
         </fieldset>
         <fieldset class="form-fieldset" id="password1-field">
           <label class="form-label" htmlFor="password1">Password</label>
           <input class="form-input" id="password1" type="password" name="password1"/>
-          <% if (errors && errors.length > 0 && errors.email !== "") { %>
-            <span class="form-error"><%= errors.password1 %></span>
-          <% } %>
         </fieldset>
         <fieldset class="form-fieldset" id="password2-field">
           <label class="form-label" htmlFor="password2">Confirm Password</label>
           <input class="form-input" id="password2" type="password" name="password2"/>
-          <% if (errors && errors.length > 0 && errors.email !== "") { %>
-            <span class="form-error"><%= errors.password2 %></span>
-          <% } %>
         </fieldset>
+        <span class="form-error"><%= errors %></span>
         <button class="form-button">Register</button>
       </form>
     </main>
